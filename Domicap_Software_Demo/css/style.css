@@ -4,11 +4,37 @@
 }
 
 body{
-	background-color: #011C26;
+	background-color: #02374b;
+	transition: all 200ms;
 }
-body.on{
-	background-color: #034d68;
+.main-wrapper{
+	background:radial-gradient(transparent, rgba(1,28,38,1));
+	transition: all 200ms;
 }
+.container{
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/* ---------- ECLAIRAGE ---------- */
+
+body.light-on{
+	background-color: #0792c5;
+}
+.main-wrapper.light-on{
+	background:radial-gradient(transparent, rgba(5,110,148,1));
+}
+header h1.light-on{
+	color: #eee;
+}
+
+/* -------------------- */
+
+
+/* ---------- HEADER ---------- */
 
 header{
 	height: 10vh;
@@ -20,21 +46,20 @@ header{
 }
 header h1{
 	font-family: 'Josefin Sans', sans-serif;
-	color: #fff;
+	color: #007ee6;
 	font-style: italic;
 	font-size: 3em;
+	transition: all 200ms;
 }
 header img{
 	width: 64px;
 	height: 64px;
 }
 
-.container{
-	height: 90vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+/* -------------------- */
+
+
+/* ---------- TABLETTE ---------- */
 
 .tablet{
 	background-color: #111;
@@ -70,4 +95,23 @@ header img{
 
 	background-color: #888;
 	border-radius: 10px;
+
+	display: flex;
+	justify-content: center;
+}
+
+.app .icon{
+	max-width: 80%;
+	max-height: 80%;
+
+	padding: 10%;
+}
+
+/* -------------------- */
+
+
+
+
+#light-app{
+	background-color: #e26a6a;
 }
