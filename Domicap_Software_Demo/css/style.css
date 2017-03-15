@@ -78,6 +78,8 @@ header img{
 
 	display: flex;
 	flex-direction: column;
+
+	position: relative;
 }
 
 .row{
@@ -105,6 +107,16 @@ header img{
 	max-height: 80%;
 
 	padding: 10%;
+}
+
+.content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 50px;
+	background-color: rgba(20,20,20,0.8);
+	display:none;
 }
 
 /* -------------------- */
