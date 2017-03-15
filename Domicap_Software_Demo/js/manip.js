@@ -1,7 +1,9 @@
 $(document).ready(function(){
 
 	$('#light-app').click(function(){
-		$('body').toggleClass('on');
+		$('.main-wrapper').toggleClass('light-on');
+		$('body').toggleClass('light-on');
+		$('header h1').toggleClass('light-on');
 	});
 
 });
