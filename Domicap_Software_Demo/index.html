@@ -5,9 +5,13 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	
+	<!-- <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script> -->
 	<script type="text/javascript" src="js/manip.js"></script>
 </head>
 <body>
@@ -28,13 +32,9 @@
 						<div class="app" id="light-app">
 							<img src="images/light-bulb.png" class="icon" />
 						</div>
-						<div class="app"></div>
-						<div class="app"></div>
-					</div>
-
-					<div class="row">
-						<div class="app"></div>
-						<div class="app"></div>
+						<div class="app" id="heating-app">
+							<img src="images/thermometre.png" class="icon" />
+						</div>
 						<div class="app"></div>
 					</div>
 
@@ -45,7 +45,34 @@
 					</div>
 
 					<div class="row">
+						<div class="app"></div>
+						<div class="app"></div>
+						<div class="app"></div>
+					</div>
+
+					<div class="row"></div>
+
+					<div class="content" id="light-content">
+						<div class="toolbar">
+							<h2>Eclairage</h2>
+							<img class="quit-icon mini-icon" src="images/cross-circular-button.png">
+						</div>
+						<div class="main-content">
+							
+							<img class="light-on" src="images/black-light-bulb.png">
+
+						</div>
+					</div>
+
+					<div class="content" id="heating-content">
 						
+						<div class="toolbar">
+							<h2>Chauffage</h2>
+							<img class="quit-icon mini-icon" src="images/cross-circular-button.png">
+						</div>
+
+						<div class="main-content"></div>
+
 					</div>
 					
 				</div>
