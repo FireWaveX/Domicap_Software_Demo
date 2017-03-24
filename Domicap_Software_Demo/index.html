@@ -16,6 +16,10 @@
 </head>
 <body>
 
+	<div class="light-bg light-livingroom"></div>
+	<div class="light-bg light-diningroom"></div>
+	<div class="light-bg light-kitchen"></div>
+
 	<div class="main-wrapper">
 
 		<header>
@@ -24,7 +28,9 @@
 		</header>
 
 		<div class="container">
+
 			<div class="tablet">
+
 				<div class="screen">
 
 					<div class="row">
@@ -35,31 +41,31 @@
 							<img src="images/thermometre.png" class="icon" />
 						</div>
 						<div class="app" id="shutter-app">
-							
+							<img src="images/shutter-icon.png" class="icon" />
 						</div>
 					</div>
 
 					<div class="row">
+						<div class="app" id="alarm-app">
+							<img src="images/alarm-icon.png" class="icon" />
+						</div>
 						<div class="app" id="health-app">
 							<img src="images/heart-icon.png" class="icon" />
 						</div>
-						<div class="app" id="alarm-app">
-							
-						</div>
 						<div class="app" id="security-app">
-							
+							<img src="images/camera-icon.png" class="icon" />
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="app" id="music-app">
-							
+							<img src="images/music-icon.png" class="icon" />
 						</div>
 						<div class="app" id="energy-app">
-							
+							<img src="images/energy-icon.png" class="icon" />
 						</div>
 						<div class="app" id="setting-app">
-							
+							<img src="images/setting-icon.png" class="icon" />
 						</div>
 					</div>
 
@@ -69,19 +75,51 @@
 
 
 					<div class="content" id="light-content">
+
 						<div class="toolbar">
 							<h2>Eclairage</h2>
 							<img class="quit-icon mini-icon" src="images/cross-circular-button.png">
 						</div>
+
 						<div class="main-content">
 
 							<div id="lights">
-								<img class="light-on" src="images/black-light-bulb.png">
-								<img class="light-on" src="images/black-light-bulb.png">
-								<img class="light-on" src="images/black-light-bulb.png">
+								<div id="light">
+									<img class="light-on" id="light-livingroom" src="images/black-light-bulb.png">
+									<p class="light-label">Salon</p>
+								</div>
+								
+								<div id="light">
+									<img class="light-on" id="light-diningroom" src="images/black-light-bulb.png">
+									<p class="light-label">Séjour</p>
+								</div>
+
+								<div id="light">
+									<img class="light-on" id="light-kitchen" src="images/black-light-bulb.png">
+									<p class="light-label">Cuisine</p>
+								</div>
+							</div>
+
+
+							<div id="lights">
+								<div id="light">
+									<img class="light-on" src="images/black-light-bulb.png">
+									<p class="light-label">Chambre<br/>parent</p>
+								</div>
+								
+								<div id="light">
+									<img class="light-on" src="images/black-light-bulb.png">
+									<p class="light-label">Chambre 1</p>
+								</div>
+
+								<div id="light">
+									<img class="light-on" src="images/black-light-bulb.png">
+									<p class="light-label">Garage</p>
+								</div>
 							</div>
 
 						</div>
+
 					</div>
 
 
@@ -109,10 +147,10 @@
 					</div>
 
 
-					<div class="content" id="health-content">
+					<div class="content" id="alarm-content">
 						
 						<div class="toolbar">
-							<h2>Santé</h2>
+							<h2>Alarme</h2>
 							<img class="quit-icon mini-icon" src="images/cross-circular-button.png">
 						</div>
 
@@ -121,10 +159,10 @@
 					</div>
 
 
-					<div class="content" id="alarm-content">
+					<div class="content" id="health-content">
 						
 						<div class="toolbar">
-							<h2>Alarme</h2>
+							<h2>Santé</h2>
 							<img class="quit-icon mini-icon" src="images/cross-circular-button.png">
 						</div>
 

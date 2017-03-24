@@ -4,11 +4,11 @@ $(document).ready(function(){
 		$( ".tablet" ).draggable();
 	});
 
-	$('.light-on').click(function(){
-		$('.main-wrapper').toggleClass('light-on');
-		$('body').toggleClass('light-on');
-		$('header h1').toggleClass('light-on');
-	});
+	// $('.light-on').click(function(){
+	// 	$('.main-wrapper').toggleClass('light-on');
+	// 	$('body').toggleClass('light-on');
+	// 	$('header h1').toggleClass('light-on');
+	// });
 
 	$('.app').click(function(){
 		toggleApp(this.id);
@@ -18,13 +18,24 @@ $(document).ready(function(){
 		toggleApp($(this).parent().parent().attr('id'));
 	});
 
+	$('.light-on').click(function(){
+		toogleLight(this.id);
+	});
+
 });
 
 
-function toggleApp(elem){
+function toggleApp(app){
 
-	var app = elem.split('-')[0];
+	app = app.split('-')[0];
 	$('#' + app + '-content').toggle('slide', {direction: 'left'}, 250);
+
+}
+
+function toogleLight(room){
+
+	var selector = '.light-bg.' + room;
+	$(selector).toggle();
 
 }
 
