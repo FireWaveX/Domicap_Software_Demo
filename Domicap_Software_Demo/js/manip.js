@@ -4,21 +4,29 @@ $(document).ready(function(){
 		$( ".tablet" ).draggable();
 	});
 
-	$('#light-app').click(function(){
-		$('#light-content').toggle('slide', {direction: 'left'}, 250);
-	});
-
-	$('.quit-icon').click(function(){
-		$('#light-content').toggle('slide', {direction: 'left'}, 250);
-	});
-
 	$('.light-on').click(function(){
 		$('.main-wrapper').toggleClass('light-on');
 		$('body').toggleClass('light-on');
 		$('header h1').toggleClass('light-on');
 	});
 
+	$('.app').click(function(){
+		toggleApp(this.id);
+	});
+
+	$('.quit-icon').click(function(){
+		toggleApp($(this).parent().parent().attr('id'));
+	});
+
 });
+
+
+function toggleApp(elem){
+
+	var app = elem.split('-')[0];
+	$('#' + app + '-content').toggle('slide', {direction: 'left'}, 250);
+
+}
 
 
 function clickOnApp($app = null) {
