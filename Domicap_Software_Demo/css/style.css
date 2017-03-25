@@ -139,7 +139,7 @@ header img{
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	align-items: stretch;
+	align-items: center;
 }
 
 .quit-icon{
@@ -194,25 +194,25 @@ header img{
 	border: 2px solid #3aaefc;
 }
 #shutter-content .main-content{
-
+	border: 2px solid #8BC34A;
 }
 #health-content .main-content{
 	border: 2px solid #ecf0f1;
 }
 #alarm-content .main-content{
-
+	border: 2px solid #FFB300;
 }
 #security-content .main-content{
-
+	border: 2px solid #FFB300;
 }
 #music-content .main-content{
-
+	border: 2px solid #43A047;
 }
 #energy-content .main-content{
-
+	border: 2px solid #65DCFF;
 }
 #setting-content .main-content{
-
+	border: 2px solid #ddd;
 }
 
 #light-content h2{
@@ -223,28 +223,32 @@ header img{
 	color: #3aaefc;
 }
 #shutter-content h2{
-
+	color: #8BC34A;
 }
 #health-content h2{
 	color: #ecf0f1;
 }
 #alarm-content h2{
-
+	color: #FFB300;
 }
 #security-content h2{
-
+	color: #FFB300;
 }
 #music-content h2{
-
+	color: #43A047;
 }
 #energy-content h2{
-
+	color: #65DCFF;
 }
 #setting-content h2{
-
+	color: #ddd;
 }
 
 /* -------------------- */
+
+
+
+/* ---------- LIGHT APP ----------*/
 
 #light-content .main-content{
 	padding-top: 30px;
@@ -295,3 +299,111 @@ header img{
 		radial-gradient(600px circle at 100% 50%, rgba(68, 155, 213,.8),rgba(68, 155, 213,0)),
 		radial-gradient(600px circle at 80% 80%, rgba(68, 155, 213,.8),rgba(68, 155, 213,0));
 }
+
+/* --------------------*/
+
+
+
+/* ---------- MUSIC APP ----------*/
+
+.pochette{
+	width: 200px;
+	height: 200px;
+
+	margin-top: 20px;
+}
+.slider{
+	margin-top: 30px;
+	height: 3px;
+	width: 90%;
+	border-radius: 3px;
+	background-color: #aaa;
+}
+.slider-forward{
+	position: absolute;
+	height: 3px;
+	
+	border-radius: 3px;
+	background-color: #fff;
+}
+.slider-btn{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: -3px;
+	right: 0;
+	border-radius: 50%;
+	background-color: #fff;
+}
+.music-time{
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+.music-time p{
+	font-size: 0.8em;
+}
+.music-title{
+	font-size: 1.5em;
+}
+.music-info{
+	font-size: 1.1em;
+	color: #43A047;
+}
+.music-ctrl{
+	display: flex;
+	width: 80%;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+.music-ctrl img{
+	width: 36px;
+	height: 36px;
+}
+.backward-music-btn{
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.slider-music .slider-forward{
+	width: 35%;
+}
+.slider-volume .slider-forward{
+	width: 15%;
+}
+.volume-icons{
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+}
+.volume-icons img{
+	margin-top: 3px;
+	width: 12px;
+	height: 12px;
+}
+
+/* -------------------- */
+
+
+
+/* ---------- SETTINGS APP ---------- */
+
+.setting-row{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	line-height: 28px;
+}
+.dev{
+	margin-top: 40px;
+	text-align: center;
+	line-height: 58px;
+}
+.dev h3{
+	color: #EAB81F;
+}
+
+/* -------------------- */
