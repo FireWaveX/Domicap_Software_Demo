@@ -146,6 +146,10 @@ header img{
 	cursor: pointer;
 }
 
+.general-info{
+	background-color: rgba(20,20,20,0.5);
+	color: #fff;
+}
 
 /* -------------------- */
 
@@ -304,6 +308,28 @@ header img{
 
 
 
+/* ---------- HEATING APP ---------- */
+
+.freeze-bg{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: url(../images/freeze-bg.jpeg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	opacity: 0
+}
+.heat-ctrl{
+	width: 30px;
+}
+
+/* -------------------- */
+
+
+
 /* ---------- MUSIC APP ----------*/
 
 .pochette{
@@ -400,10 +426,11 @@ header img{
 .dev{
 	margin-top: 40px;
 	text-align: center;
-	line-height: 58px;
+	line-height: 50px;
 }
 .dev h3{
 	color: #EAB81F;
+	font-size: 1.5em;
 }
 
 /* -------------------- */
