@@ -33,13 +33,14 @@ $(document).ready(function(){
 function changeHeat(button){
 
 	var action = $(button).text();
-	var heat = Number($('.heat').text());
+	var heat = Number($(button).parent().children('p').children().text());
 	if(action == '-')
-		heat -= 0.5;
+		heat -= 1;
 	else
-		heat += 0.5;
-	$('.heat').text(heat);
-	changeHeatScreen(heat);
+		heat += 1;
+	$(button).parent().children('p').children().text(heat);
+	if($(button).parent().attr('id') == 'heat-livingroom')
+		changeHeatScreen(heat);
 
 }
 
@@ -53,13 +54,15 @@ function changeHeatScreen(heat){
 		$('.freeze-bg').css({opacity: x});
 	}
 	else if(heat >= 25){
-
+		var x = ((heat-25)*0.4)/15;
+		$('.droplet-bg').css({opacity: x});
 	}
 	else if(heat > 40){
-
+		$('.droplet-bg').css({opacity: 0.4});
 	}
 	else{
 		$('.freeze-bg').css({opacity: 0});
+		$('.droplet-bg').css({opacity: 0});
 	}
 
 }

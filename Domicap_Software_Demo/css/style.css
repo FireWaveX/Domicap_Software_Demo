@@ -150,6 +150,9 @@ header img{
 	background-color: rgba(20,20,20,0.5);
 	color: #fff;
 }
+.weather img{
+	width: 64px;
+}
 
 /* -------------------- */
 
@@ -281,27 +284,31 @@ header img{
 }
 
 .light-bg{
-	z-index: 1;
+	z-index: 2;
 	display: none;
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 100%;
 	height: 100vh;
+	transition: all 200ms;
 }
 .light-bg.light-livingroom{
 	background:
-		radial-gradient(600px circle at 20% 0%, rgba(68, 155, 213,.8),rgba(68, 155, 213,0)),
-		radial-gradient(600px circle at 0% 50%, rgba(68, 155, 213,.8),rgba(68, 155, 213,0));
+		radial-gradient(600px circle at 20% 0%, rgba(255, 255, 255,.4),rgba(255, 255, 255,0)),
+		radial-gradient(600px circle at 0% 50%, rgba(255, 255, 255,.4),rgba(255, 255, 255,0));
+	transition: all 200ms;
 }
 .light-bg.light-diningroom{
 	background:
-		radial-gradient(1500px circle at 50% 50%, rgba(68, 155, 213,.8),rgba(68, 155, 213,0));
+		radial-gradient(1200px circle at 50% 50%, rgba(255, 255, 255,.8),rgba(255, 255, 255,0));
+	transition: all 200ms;
 }
 .light-bg.light-kitchen{
 	background:
-		radial-gradient(600px circle at 100% 50%, rgba(68, 155, 213,.8),rgba(68, 155, 213,0)),
-		radial-gradient(600px circle at 80% 80%, rgba(68, 155, 213,.8),rgba(68, 155, 213,0));
+		radial-gradient(600px circle at 100% 50%, rgba(255, 255, 255,.4),rgba(255, 255, 255,0)),
+		radial-gradient(600px circle at 80% 80%, rgba(255, 255, 255,.4),rgba(255, 255, 255,0));
+	transition: all 200ms;
 }
 
 /* --------------------*/
@@ -320,10 +327,35 @@ header img{
 	background: url(../images/freeze-bg.jpeg);
 	-webkit-background-size: cover;
 	background-size: cover;
-	opacity: 0
+	opacity: 0;
+	transition: all 200ms;
+}
+.droplet-bg{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: url(../images/droplet-bg.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	opacity: 0;
+	transition: all 200ms;
+}
+.heat-ctrls{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;	
 }
 .heat-ctrl{
-	width: 30px;
+	width: 60px;
+	border: none;
+	background-color: #3aaefc;
+	color: #fff;
+	font-size: 1.5em;
 }
 
 /* -------------------- */
@@ -431,6 +463,52 @@ header img{
 .dev h3{
 	color: #EAB81F;
 	font-size: 1.5em;
+}
+.credit-link{
+	text-decoration: none;
+	background-color: #EAB81F;
+	color: #111;
+	font-weight: bold;
+	margin-top: 30px;
+	padding: 5px 20px;
+}
+
+/* -------------------- */
+
+
+
+/* ---------- BSOD ---------- */
+
+.bsod{
+	background-color: #1c00b0;
+	text-align: center;
+
+	width: 100%;
+	height: 100%;
+
+	color: #fff;
+	font-size: 1.5em;
+}
+.bsod div{
+	font-family: 'VT323', monospace;
+	margin-bottom: 10px;
+}
+.bsod div:first-child{
+	padding-top: 20px;
+}
+.bsod div a{
+	color: #01db01;
+	font-family: 'VT323', monospace;
+	text-decoration: none;
+}
+
+.bsod > a{
+	margin-top: 50px;
+	display: inline-block;
+	color: #01db01;
+	text-decoration: none;
+	/*background-color: black;*/
+	padding: 5px;
 }
 
 /* -------------------- */

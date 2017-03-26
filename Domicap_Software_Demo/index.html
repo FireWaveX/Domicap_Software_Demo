@@ -20,6 +20,7 @@
 	<div class="light-bg light-diningroom"></div>
 	<div class="light-bg light-kitchen"></div>
 	<div class="freeze-bg"></div>
+	<div class="droplet-bg"></div>
 
 	<div class="main-wrapper">
 
@@ -72,6 +73,9 @@
 
 					<div class="row general-info">
 						<div class="date"></div>
+						<div class="weather">
+							<img src="images/clouds.png" alt="Clouds">
+						</div>
 					</div>
 
 
@@ -132,11 +136,43 @@
 						</div>
 
 						<div class="main-content">
-							
-							<button class="heat-ctrl">-</button>
-							<p><span class="heat">20</span>°</p>
-							<button class="heat-ctrl">+</button>
 
+							<div class="heat-ctrls">
+								<button class="heat-ctrl">-</button>
+								<p>Salon : <span class="heat">21</span>°</p>
+								<button class="heat-ctrl">+</button>
+							</div>
+
+							<div class="heat-ctrls" id="heat-livingroom">
+								<button class="heat-ctrl">-</button>
+								<p>Séjour : <span class="heat">21</span>°</p>
+								<button class="heat-ctrl">+</button>
+							</div>
+
+							<div class="heat-ctrls">
+								<button class="heat-ctrl">-</button>
+								<p>Cuisine : <span class="heat">23</span>°</p>
+								<button class="heat-ctrl">+</button>
+							</div>
+
+							<div class="heat-ctrls">
+								<button class="heat-ctrl">-</button>
+								<p>Chambre parent : <span class="heat">19</span>°</p>
+								<button class="heat-ctrl">+</button>
+							</div>
+
+							<div class="heat-ctrls">
+								<button class="heat-ctrl">-</button>
+								<p>Chambre 1 : <span class="heat">19</span>°</p>
+								<button class="heat-ctrl">+</button>
+							</div>
+
+							<div class="heat-ctrls">
+								<button class="heat-ctrl">-</button>
+								<p>Salle de bain : <span class="heat">24</span>°</p>
+								<button class="heat-ctrl">+</button>
+							</div>
+							
 						</div>
 
 					</div>
@@ -270,6 +306,8 @@
 								<p>Ledemé Alexandre</p>
 								<p>de l'Escaille Yann</p>
 							</div>
+
+							<a class="credit-link" href="credit.html">Crédit</a>
 
 						</div>
 
