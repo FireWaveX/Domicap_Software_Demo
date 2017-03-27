@@ -16,6 +16,10 @@
 </head>
 <body>
 
+	<div id="contact-btn">
+		<img src="images/mail-icon.png" alt="Icone de mail" />
+	</div>
+
 	<div class="intro">
 		<img src="images/logo.png" alt="Logo">
 		<p class="title-intro">Domicap</p>
@@ -34,7 +38,8 @@
 			<h1>Domicap</h1>
 		</header>
 
-		<h2>Viendez, viendez, au club des p'tites araignées</h2>
+		<h2 class="phrase">Contrôlez aisément votre maison depuis votre fauteuil roulant avec notre application !</h2>
+		<h3>N'hésitez pas à laisser vos impressions en cliquant sur l'icône mail en bas à droite !</h3>
 
 		<div class="container">
 
@@ -89,9 +94,13 @@
 
 							<div class="weather">
 								<img src="images/clouds.png" alt="Clouds">
-								<div class="location">Annecy</div>
+								<div>
+									<div class="location">Annecy</div>
+									<div class="ext-heat">18°C</div>
+								</div>
+								
 							</div>
-							<div class="ext-heat">18°C</div>
+							
 						</div>
 					</div>
 
@@ -107,17 +116,17 @@
 
 							<div id="lights">
 								<div id="light">
-									<img class="light-on" id="light-livingroom" src="images/black-light-bulb.png">
+									<img class="light-on" id="light-livingroom" src="images/white-light-bulb.png">
 									<p class="light-label">Salon</p>
 								</div>
 								
 								<div id="light">
-									<img class="light-on" id="light-diningroom" src="images/black-light-bulb.png">
+									<img class="light-on" id="light-diningroom" src="images/white-light-bulb.png">
 									<p class="light-label">Séjour</p>
 								</div>
 
 								<div id="light">
-									<img class="light-on" id="light-kitchen" src="images/black-light-bulb.png">
+									<img class="light-on" id="light-kitchen" src="images/white-light-bulb.png">
 									<p class="light-label">Cuisine</p>
 								</div>
 							</div>
@@ -125,17 +134,17 @@
 
 							<div id="lights">
 								<div id="light">
-									<img class="light-on" src="images/black-light-bulb.png">
+									<img class="light-on" id="light-parent-bedroom" src="images/white-light-bulb.png">
 									<p class="light-label">Chambre<br/>parent</p>
 								</div>
 								
 								<div id="light">
-									<img class="light-on" src="images/black-light-bulb.png">
+									<img class="light-on" id="light-bedroom" src="images/white-light-bulb.png">
 									<p class="light-label">Chambre 1</p>
 								</div>
 
 								<div id="light">
-									<img class="light-on" src="images/black-light-bulb.png">
+									<img class="light-on" id="light-garage" src="images/white-light-bulb.png">
 									<p class="light-label">Garage</p>
 								</div>
 							</div>
@@ -202,7 +211,54 @@
 							<img class="quit-icon mini-icon" src="images/cross-circular-button.png">
 						</div>
 
-						<div class="main-content"></div>
+						<div class="main-content">
+
+							<div class="shutter">
+								<p>Salon :</p>
+								<div class="shutter-ctrl">
+									<input type="submit" value="Baisser" />
+									<input type="submit" value="Stopper" class="stop-shutter" />
+									<input type="submit" value="Monter" />
+								</div>
+							</div>
+
+							<div class="shutter">
+								<p>Séjour :</p>
+								<div class="shutter-ctrl">
+									<input type="submit" value="Baisser" />
+									<input type="submit" value="Stopper" class="stop-shutter" />
+									<input type="submit" value="Monter" />
+								</div>
+							</div>
+
+							<div class="shutter">
+								<p>Cuisine :</p>
+								<div class="shutter-ctrl">
+									<input type="submit" value="Baisser" />
+									<input type="submit" value="Stopper" class="stop-shutter" />
+									<input type="submit" value="Monter" />
+								</div>
+							</div>
+
+							<div class="shutter">
+								<p>Chambre parents :</p>
+								<div class="shutter-ctrl">
+									<input type="submit" value="Baisser" />
+									<input type="submit" value="Stopper" class="stop-shutter" />
+									<input type="submit" value="Monter" />
+								</div>
+							</div>
+
+							<div class="shutter">
+								<p>Chambre 1 :</p>
+								<div class="shutter-ctrl">
+									<input type="submit" value="Baisser" />
+									<input type="submit" value="Stopper" class="stop-shutter" />
+									<input type="submit" value="Monter" />
+								</div>
+							</div>
+
+						</div>
 
 					</div>
 
@@ -214,7 +270,17 @@
 							<img class="quit-icon mini-icon" src="images/cross-circular-button.png">
 						</div>
 
-						<div class="main-content"></div>
+						<div class="main-content">
+							
+							<p>Derière alarme déclenchée Lundi à 15:37</p>
+
+							<div class="alarm-ctrls">
+								<div>Marche complète</div>
+								<div>Marche partielle</div>
+								<div class="arret">Arrêt</div>
+							</div>
+							
+						</div>
 
 					</div>
 
@@ -226,7 +292,17 @@
 							<img class="quit-icon mini-icon" src="images/cross-circular-button.png">
 						</div>
 
-						<div class="main-content"></div>
+						<div class="main-content">
+							
+							<div class="health-info">
+								<p>Température corporelle :</p><p>26.8°C</p>
+							</div>
+							<div class="health-info">
+								<p>Rythme cardiaque :</p><p><span class="rythme">73</span> bpm</p>
+							</div>
+							
+
+						</div>
 
 					</div>
 
@@ -302,7 +378,22 @@
 							<img class="quit-icon mini-icon" src="images/cross-circular-button.png">
 						</div>
 
-						<div class="main-content"></div>
+						<div class="main-content">
+							
+							<div class="conso-info">
+								<p class="energy-subject">Chauffage :</p>
+								<p class="conso" id="conso-chauff"><span>11.2</span> kW/h</p>
+							</div>
+							<div class="conso-info">
+								<p class="energy-subject">Lumières :</p>
+								<p class="conso" id="conso-elec"><span>5.6</span>kW/h</p>
+							</div>
+							<div class="conso-info">
+								<p class="energy-subject">Electroménager :</p>
+								<p class="conso" id="conso-house"><span>7.8</span>kW/h</p>
+							</div>
+
+						</div>
 
 					</div>
 
@@ -337,6 +428,27 @@
 					
 				</div>
 			</div>
+		</div>
+
+		<div class="lightbox" id="light-contact">
+
+			<h1>Donnez nous vos impressions !</h1>
+			
+			<form action="#" method="post" id="contact-form">
+				
+				<input type="text" id="mail" name="mail" placeholder="Email" />
+				<input type="text" id="subject" name="subject" placeholder="Sujet" />
+				<textarea id="descr" name="descr" placeholder="Impression"></textarea>
+
+			</form>
+
+			<div class="action-btn">
+				
+				<button id="clr-btn">Clear</button>
+				<button id="send-btn">Send</button>
+
+			</div>
+
 		</div>
 		
 	</div>

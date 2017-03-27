@@ -32,23 +32,95 @@ $(document).ready(function(){
 	displayTime();
 	setInterval(function(){
 		displayTime();
-	}, 1000)
+	}, 1000);
+
+	$('#contact-btn').click(function(){
+		$('#light-contact').fadeIn(200).css('display', 'flex');
+	});
+
+	$('.action-btn').click(function(e){
+		e.preventDefault();
+	});
+
+	$('#clr-btn').click(function(){
+
+		$('#name').val('');
+		$('#mail').val('');
+		$('#subject').val('');
+		$('#descr').val('');
+
+	});
+
+	$('.lightbox').click(function(){
+		removeLightbox($(this));
+	});
+
+	setInterval(function(){
+		var bpm = Math.random() * (80 - 70) + 70;
+		bpm = Math.round(bpm);
+		$('.rythme').text(bpm);
+	},2000);
+
+	updateEnergyColor();
+
+	$('.stop-shutter').css({
+		backgroundColor : '#699933',
+		color : 'white'
+	});
+	$('.shutter-ctrl input').click(function(){
+		$(this).parent().children().css({
+			backgroundColor : 'white',
+			color : 'black'
+		});
+		$(this).css({
+			backgroundColor : '#699933',
+			color : 'white'
+		})
+	});
+
+	$('.arret').css({
+		backgroundColor : '#d35400',
+		color : 'white'
+	});
+	$('.alarm-ctrls div').click(function(){
+		$(this).parent().children().css({
+			backgroundColor : '#FFB300',
+			color : 'black'
+		});
+		$(this).css({
+			backgroundColor : '#d35400',
+			color : 'white'
+		});
+	});
 
 });
+
+function updateEnergyColor(){
+
+	$('.conso span').each(function(){
+		if($(this).text() < 10)
+			$(this).parent().css({color : '#65DCFF'});
+		else if($(this).text() > 20)
+			$(this).parent().css({color : '#c0392b'});
+		else
+			$(this).parent().css({color : '#e67e22'});
+	});
+
+}
 
 function intro(){
 
 	setTimeout(function(){
 		$('.title-intro').slideToggle(200);
-	}, 1000)
+	}, 10)
 
 	setTimeout(function(){
 		$('.intro').fadeOut(400);
-	}, 3000)
+	}, 30)
 
 	setTimeout(function(){
 		$('.screen').css({ display : 'flex'});
-	}, 3500);
+	}, 35);
 
 }
 
@@ -121,6 +193,12 @@ function toggleApp(app){
 
 function toogleLight(room){
 
+	console.log($('#'+room));
+	var src = ($('#'+room).attr('src') == 'images/white-light-bulb.png')
+		? 'images/red-light-bulb.png'
+		: 'images/white-light-bulb.png';
+
+	$('#'+room).attr('src', src);
 	var selector = '.light-bg.' + room;
 	$(selector).toggle();
 
@@ -142,5 +220,23 @@ function clickOnApp($app = null) {
 	});
 
 	return hover;
+
+}
+
+function removeLightbox($lightbox){
+
+	var hov = false;
+
+	$lightbox.children().each(function(){
+
+		if($(this).is(':hover'))	
+			hov = true;
+
+	});
+
+	if(!hov){
+		$('.mailInfo').remove();
+		$('.lightbox').fadeOut(200);
+	}
 
 }
