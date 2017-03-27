@@ -50,6 +50,11 @@ header img{
 	height: 64px;
 }
 
+.main-wrapper h2{
+	text-align: center;
+	color: #fff;
+}
+
 /* -------------------- */
 
 
@@ -356,6 +361,19 @@ header img{
 	background-color: #3aaefc;
 	color: #fff;
 	font-size: 1.5em;
+}
+
+/* -------------------- */
+
+
+
+/* ---------- SECURITY APP ---------- */
+
+.camera-video{
+	width: 90%;
+	height: 300px;
+	border: 2px solid #FFB300;
+	border-radius: 5px;
 }
 
 /* -------------------- */
