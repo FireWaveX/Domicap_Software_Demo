@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	intro();
+
 	$(function() {
 		$( ".tablet" ).draggable();
 	});
@@ -27,8 +29,28 @@ $(document).ready(function(){
 	});
 
 	displayDate();
+	displayTime();
+	setInterval(function(){
+		displayTime();
+	}, 1000)
 
 });
+
+function intro(){
+
+	setTimeout(function(){
+		$('.title-intro').slideToggle(200);
+	}, 1000)
+
+	setTimeout(function(){
+		$('.intro').fadeOut(400);
+	}, 3000)
+
+	setTimeout(function(){
+		$('.screen').css({ display : 'flex'});
+	}, 3500);
+
+}
 
 function changeHeat(button){
 
@@ -75,7 +97,17 @@ function displayDate(){
 	var day 	= date.getDay();
 	var fullday = date.getDate();
 	var month 	= date.getMonth();
-	$('.date').html(days[day] + ' ' + fullday + "<br />" + months[month]);
+	$('.date').html(days[day] + ' ' + fullday + ' ' + months[month]);
+
+}
+
+function displayTime(){
+
+	var date 	= new Date(Date.now());
+	var hour 	= date.getHours();
+	var min 	= date.getMinutes();
+	var sec 	= date.getSeconds();
+	$('.time').html(hour + ':' + min + ':' + sec);
 
 }
 
